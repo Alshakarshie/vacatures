@@ -1,0 +1,86 @@
+@import '../../assets/scss/system.scss';
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: size(10);
+    z-index: 1;
+    border-bottom: 1px solid $tertiary-color;
+
+    @include respond-to(small) {
+        padding: size(15) 0;
+    }
+}
+
+.nav {
+    &-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+        @include respond-to(small) {
+            display: none;
+        }
+    }
+
+    &-icon {
+        font-size: 1.5rem;
+        color: $primary-color;
+    }
+
+    &-center {
+        margin: 0 auto;
+        display: block;
+
+        @include respond-to(small) {
+            display: flex;
+        }
+    }
+
+    &-links {
+        height: 0;
+        overflow: hidden;
+        transition: $mainTransition;
+        list-style-type: none;
+
+        @include respond-to(small) {
+            height: auto;
+            display: flex;
+            margin-left: size(64);
+            padding-top: size(10);
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: size(16) 0;
+            color: $white;
+            transition: $mainTransition;
+            text-align: center;
+            font-size: size(16);
+            font-weight: 600;
+            letter-spacing: $mainSpacing;
+
+            @include respond-to(small) {
+                margin: 0 size(16);
+                padding: size(8) 0;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.show-nav {
+    height: size(100);
+}

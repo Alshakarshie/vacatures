@@ -1,0 +1,54 @@
+@import '../../assets/scss/system.scss';
+
+.services {
+  padding: 5rem 0;
+}
+
+.service {
+  background: url("../../assets/images/background.png") center/cover no-repeat;
+  text-align: center;
+  padding: size(20) size(40);
+  box-shadow: 0 0 10px #999;
+  border-radius: 5px;
+  background-blend-mode: multiply;
+  background-color: $tertiary-color;
+  text-shadow: 1px $secondary-color;
+}
+
+.services-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+}
+
+.service span {
+  display: inline-block;
+  color: $primary-color;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.services h6 {
+  letter-spacing: $mainSpacing;
+}
+
+.services p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services p {
+    width: 100%;
+  }
+}

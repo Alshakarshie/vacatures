@@ -1,0 +1,45 @@
+@import '../../assets/scss/system.scss';
+
+.banner {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    color: $white;
+    padding: size(32) size(16);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: $mainSpacing;
+    position: relative;
+    z-index: 2;
+
+    @include respond-to(small) {
+        padding: 2rem 3rem;
+    }
+
+    @include respond-to(medium) {
+        padding: 2rem 6rem;
+    }
+
+    & h1 {
+        font-size: 2.5rem;
+
+        @include respond-to(small) {
+            font-size: 3rem;
+        }
+
+        @include respond-to(medium) {
+            font-size: 4rem;
+        }
+    }
+
+    & div {
+        width: 10rem;
+        height: 3px;
+        background: $primary-color;
+        margin: 1.7rem auto;
+    }
+
+    & p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}

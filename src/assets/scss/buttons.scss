@@ -1,0 +1,16 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: $primary-color;
+    background: $secondary-color;
+    padding: size(10) size(20);
+    border: size(3) solid $primary-color;
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background: transparent;
+    }
+}
